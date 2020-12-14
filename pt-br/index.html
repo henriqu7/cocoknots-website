@@ -132,6 +132,10 @@
                                                         <option value="Shared room">Compartilhado</option>
                                                     </select>
                                                 </div>
+                                                <div class="input-group">
+                                                    <input type='text' name="guest_contact" id="guest_contact" class="form-control nice-select wide" placeholder="Whatsapp" />
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -447,7 +451,8 @@
                         checkin: document.getElementById('checkin').value,
                         checkout: document.getElementById('checkout').value,
                     },
-                    guests: document.getElementById("guests").value
+                    guests: document.getElementById("guests").value,
+                    guest_contact: document.getElementById("guest_contact").value
                 }
             
                 axios({
