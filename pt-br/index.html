@@ -126,7 +126,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="input-group">
-                                                    <select class="wide">
+                                                    <select class="wide" id="room_type">
                                                         <option data-display="Quarto">Quarto</option>
                                                         <option value="Private room">Privado</option>
                                                         <option value="Shared room">Compartilhado</option>
@@ -444,9 +444,8 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script>
             function searchCep () {
-                let checkin = document.getElementById('checkin').value
                 let json = {
-                    room_number: 1,
+                    room_type: document.getElementById('room_type').value,
                     date: {
                         checkin: document.getElementById('checkin').value,
                         checkout: document.getElementById('checkout').value,
