@@ -444,6 +444,11 @@
         <script src="js/custom.js" type="text/javascript"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script>
+            //const URL = 'http://localhost:3000/dev/schedulerequest';
+            const URL = 'https://u64ofbq1ma.execute-api.us-east-1.amazonaws.com/dev/schedulerequest';
+
+
+
             function validateForm(form) {
                 console.log(form)
                 const emptyFields = checkEmptyFields(form)
@@ -502,7 +507,7 @@
                 if (validation) {
                     axios({
                         method: 'post',
-                        url: 'https://u64ofbq1ma.execute-api.us-east-1.amazonaws.com/dev/schedulerequest',
+                        url: URL,
                         data: json,
                     })
                     .then(response => {
