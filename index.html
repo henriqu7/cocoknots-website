@@ -507,7 +507,7 @@
                 if (validation) {
                     axios({
                         method: 'post',
-                        url: URL,
+                        url: `${URL}/dev/schedulerequest`,
                         data: json,
                     })
                     .then(response => {
